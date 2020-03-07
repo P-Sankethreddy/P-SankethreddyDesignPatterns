@@ -1,4 +1,4 @@
-package EPAM_Exceptions_Loggings.EPAM_Exceptions_Loggings;
+package Designpattern.Designpattern;
 
 import static org.junit.Assert.assertTrue;
 
