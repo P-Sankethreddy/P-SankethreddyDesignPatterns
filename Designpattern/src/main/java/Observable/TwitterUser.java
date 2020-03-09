@@ -3,12 +3,13 @@ package Observable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TwitterUser {
+public class TwitterUser implements TwitterUserInterface {
 
 	
 	private List<Follower> follower=new ArrayList<>();
 	String title;
 	
+	@Override
 	public void Follow(Follower fname)
 	{
 		
@@ -16,20 +17,23 @@ public class TwitterUser {
 		
 	}
 
-public void unFollow(Follower fname)
+@Override
+public void unFollow(FollowerInterface fname)
 {
 	follower.remove(fname);
 }
 
+@Override
 public void notifyFollowers()
 {
-	for(Follower fname:follower)
+	for(FollowerInterface fname:follower)
 	{
 		
 		fname.update();
 	}
 
 }
+@Override
 public void update(String title)
 {
 this.title=title;
