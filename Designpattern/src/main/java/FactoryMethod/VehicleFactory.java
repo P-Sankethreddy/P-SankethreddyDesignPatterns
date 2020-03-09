@@ -13,8 +13,16 @@ public class VehicleFactory
 	
 public static void main(String args[])
 {
-	Vehicle obj=new FourWheeler();
-	obj.VehicleType();
-
+	VehicleFactoryPattern vehiclePatternObject= new VehicleFactoryPattern();
+	Vehicle VehicleObject=vehiclePatternObject.getInstance("TwoWheeler");
+    
+	if(VehicleObject!=null) {
+	VehicleObject.VehicleType();	
+	}
+	else
+	{
+		
+		System.out.println(" Specified vehicleType is not available");
+	}
 }
 }
